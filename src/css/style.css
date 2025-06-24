@@ -515,7 +515,10 @@ footer {
 }
 
 @media (max-width: 1300px) {
-
+  body {
+    background-attachment: scroll; /* Substitui o fixed que dá problema */
+    background-position: center top; /* Ajuste conforme necessário */
+  }
   .contador-metricas {
     position: static;          /* Remove a posição fixa */
     transform: none;           /* Remove o translateY */
