@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Inicio</title>
+  <link rel="stylesheet" href="./src/css/style.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+</head>
+<body>
+  <section id="topo-do-site">
+    <header>
+      <a href="#topo-do-site" class="logo">
+        <img src="./src/assets/logo.png" alt="Logo" />
+      </a>
+      <nav>
+        <ul id="menu-header">
+          <li><a href="#topo-do-site" class="item-menu">INÍCIO</a></li>
+          <li><a href="./planos.html" class="item-menu">PLANOS</a></li>
+          <li><a href="#ativi" class="item-menu">ATIVIDADES</a></li>
+          <li><a href="./sobre.html" class="item-menu">SOBRE NÓS</a></li>
+          <li class="mobile-only"><a href="/login.html" class="item-menu">ÁREA DO ALUNO</a></li>
+        </ul>
+        <div class="hamburguer">
+          <span class="barra"></span>
+          <span class="barra"></span>
+          <span class="barra"></span>
+        </div>
+      </nav>
+      <a href="/login.html" class="button-container">
+        <button><span>Área do aluno</span></button>
+      </a>
+    </header>
+  </section>
+
+  <main>
+    <section class="primeira-parte">
+      <div id="texto-principal">
+        <h1><span id="s3">OLD</span> <span id="s1">SCHOOL</span> <span id="s2">HOUSE</span></h1>
+      </div>
+
+      <div id="p-principal">
+        <p>A ACADEMIA QUE <span id="digitando"></span> SUA MELHOR VERSÃO.</p>
+      </div>
+
+      <div class="contador-metricas">
+        <div class="metrica">
+          <h2 class="contador" data-valor="150">0</h2>
+          <p>Alunos transformados</p>
+        </div>
+        <div class="metrica">
+          <h2 class="contador" data-valor="95">0</h2>
+          <p>Treinos ativos</p>
+        </div>
+        <div class="metrica">
+          <h2 class="contador" data-valor="42">0</h2>
+          <p>Aulas por semana</p>
+        </div>
+      </div>
+
+      <div class="btn-comece">
+        <a href="./planos.html"><button><span>COMECE AGORA</span></button></a>
+      </div>
+    </section>
+
+    <div class="fundo-preto">
+      <section class="nossa-gym">
+        <article class="area">
+          <h1>CONHEÇA <span id="verde">NOSSA</span> <span id="vermelho">ACADEMIA</span></h1>
+          <p>Viemos para São Paulo com intuito de elevar o nível do seu treino e trazer sua melhor versão. Na Old School House não tem espaço para a moleza. Nosso ambiente é para quem busca resultados reais com aparelhos de última geração e o espaço que você precisa.</p>
+          <button><span>SAIBA MAIS</span></button>
+        </article>
+        <img class="img2cara" src="src/assets/sobre.jpg" alt="">
+      </section>
+
+      <section id="ativi" class="atividades">
+        <h1>CONHEÇA NOSSAS <span>ATIVIDADES</span></h1>
+      </section>
+
+      <section class="atividades-imagens">
+        <div class="imagem-com-texto">
+          <img src="./src/assets/musculacao.png" alt="Imagem 1" />
+          <div class="overlay"></div>
+          <div class="blur-esquerda"></div>
+          <div class="texto-sobreposto">MUSCULAÇÃO</div>
+        </div>
+
+        <div class="imagem-com-texto">
+          <img src="./src/assets/muaythai.png" alt="Imagem 2" />
+          <div class="overlay"></div>
+          <div class="blur-esquerda"></div>
+          <div class="texto-sobreposto">MUAY THAI</div>
+        </div>
+
+        <div class="imagem-com-texto">
+          <img src="./src/assets/dança.png" alt="Imagem 3" />
+          <div class="overlay"></div>
+          <div class="blur-esquerda"></div>
+          <div class="texto-sobreposto">DANÇA</div>
+        </div>
+      </section>
+
+      <section class="atividades">
+        <a href="./planos.html"><button><span>VENHA FAZER PARTE</span></button></a>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <article class="estrutura">
+      <div class="img-footer">
+        <img src="src/assets/logo.png" alt="Logo" />
+      </div>
+
+      <div class="navegue">
+        <h1>NAVEGUE</h1>
+        <ul>
+          <li><a href="./planos.html">Nossos planos</a></li>
+          <li><a href="./login.html">Área do aluno</a></li>
+          <li><a href="./sobre.html">Sobre</a></li>
+        </ul>
+      </div>
+
+      <div class="contato">
+        <h1>CONTATO</h1>
+        <ul>
+          <li><i class="bi bi-envelope"></i> sac@academiaoldschoolhouse.com.br</li>
+          <li><i class="bi bi-whatsapp"></i> (11) 99999-999</li>
+        </ul>
+      </div>
+
+      <div class="redes-sociais">
+        <h1>REDES SOCIAIS</h1>
+        <div class="btn-social">
+          <a href="#"><button><i class="bi bi-instagram"></i></button></a>
+          <a href="#"><button><i class="bi bi-tiktok"></i></button></a>
+          <a href="#"><button><i class="bi bi-youtube"></i></button></a>
+        </div>
+      </div>
+    </article>
+
+    <div class="direitos">
+      <p>&copy; 2025 - todos os direitos reservados</p>
+    </div>
+  </footer>
+
+  <script src="./src/js/script.js"></script>
+</body>
+</html>
