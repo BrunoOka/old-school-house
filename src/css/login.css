@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Bebas+Neue&family=Chilanka&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+body,html{
+
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden; /* evita scroll causado pelo blur */
+  
+}
+
+.background-blur {
+  position: fixed;
+  top: -10px;     /* ultrapassa um pouco o topo */
+  left: -10px;    /* ultrapassa um pouco a esquerda */
+  width: calc(100vw + 20px);  /* aumenta largura para compensar */
+  height: calc(100vh + 20px); /* aumenta altura para compensar */
+  background-image: url('../assets/fundo3.jpg');
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+  filter: blur(8px)brightness(0.5); /* 50% de brilho, mais escura */
+}
+.login-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Isso garante que ele ocupe a tela inteira */
+  position: relative;
+  z-index: 1;
+}
+.login-box {
+  position: relative;
+  z-index: 1;
+  max-width: 600px;
+  width: 100%;
+  background-color: #1c1c1c;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px rgba(0,0,0,0.6);
+  color: white;
+  height: 500px;
+}
+h1{
+    color: #ffffff;
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    white-space: pre-line;
+    text-align: center;
+    position: relative;
+    top: -20px;
+    font-size: 40px;
+    
+}
+@keyframes pulsar-tamanho {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1); 
+  }
+}
+
+img{
+    width: 150px;
+    display: flex;
+    display: block;
+     margin-left: auto;
+    margin-right: auto;
+     position: relative;
+    top: 0px;
+    filter: brightness(1.5); /* 1.0 é normal, >1 aumenta o brilho */
+     position: relative;
+  animation: pulsar-tamanho 2s infinite ease-in-out;
+}
+input {
+  width: 100%;
+  border: 0;
+  outline: none;
+  padding: 20px 15px;
+  border-radius: 4px;
+  color: white;
+  font-size: 18px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;       /* remove margem superior dos inputs */
+  margin-bottom: 10px; /* espaço entre inputs */
+    background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3); /* opcional: borda semi-transparente */
+  color: white;
+  /* demais estilos */
+}
+
+/* Aplica o espaçamento maior só no primeiro input */
+input:first-of-type {
+  margin-top: -30px;
+}
+
+button{
+display: block;
+  margin: 0 auto; /* centraliza */
+  padding: 10px 40px;
+  font-size: 18px;
+  font-weight: 600;
+  background-color: #F9484A;
+  border: 0;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 0.2s;
+  margin-top: 30px;
+  color: rgba(255, 255, 255, 0.514);
+}
+button:hover{
+    box-shadow: 0px 0px 8px #ff000063; /* Adiciona uma sombra branca */
+  transform: scale(1.05); /* Efeito de zoom leve */
+  color: white;
+}
+@media (max-width: 600px) {
+  .background-blur {
+    background-position: top center;
+    background-size: cover;
+    filter: blur(6px) brightness(0.4);
+  }
+  .login-box{
+    max-width:350px;
+  }
+}
