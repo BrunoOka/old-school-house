@@ -1,0 +1,279 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Bebas+Neue&family=Chilanka&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+body,html{
+   font-family: "Poppins", sans-serif;
+   background-color: #1a1a1a;
+   height: 100%;
+    margin: 0;
+    padding: 0;
+} 
+
+header {
+    width: 100%;
+    padding: 0.5rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Logo à esquerda, menu centro e botão direita */
+    background: rgba(0, 0, 0, 0.6); /* fundo preto transparente */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(8px); /* desfoque do fundo atrás do header */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: background-color 0.3s ease; 
+    position: relative;
+}
+header:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+/* Logo à esquerda */
+header > a.logo {
+    display: flex;
+    align-items: center;
+    width: 120px;
+    margin-left: 10px;
+}
+
+header > a.logo img {
+    width: 100%;
+    filter: brightness(1.5);
+}
+
+/* Menu centralizado */
+nav{
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+}
+
+/* Para desktop */
+@media (min-width: 1025px) {
+  #menu-header {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+
+#menu-header li a {
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    font-size: 20px;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+        position: relative;
+}
+#menu-header li a::after{
+    content: " ";
+    width: 0%;
+    height: 2.5px;
+    background-color: #f9484a;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: 0.5s ease-in-out;
+}
+#menu-header li a:hover::after{
+    width: 100%;
+}
+
+#container {
+  display: flex;
+  align-items: center;     /* centraliza verticalmente */
+  justify-content: center; /* centraliza horizontalmente */
+  height: 100vh;           /* altura total da tela */
+}
+    #conteudo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 60px;
+}
+.produto {
+  background-color: #2b2b2b;
+  border: 1px solid #f9484a;
+  border-radius: 4px;
+  padding: 40px 30px; /* aumentei padding para mais espaço interno */
+  width: 300px;
+  color: white;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.05);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  white-space: pre-line;
+  height: 530px;
+  gap: 30px; /* espaçamento vertical entre filhos */
+}
+.produto:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
+}
+.produto h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin: 0; /* tirar margem padrão */
+  padding-bottom: 10px; /* espaço abaixo do título */
+}
+.preco {
+  font-size: 2.3rem;
+  font-weight: bold;
+  color: white;
+  margin: 0;
+  padding-bottom: 15px; /* espaço após o preço */
+}
+/* Destaque no plano elite */
+.destaque {
+  border: 2px solid #00B3A4;
+  box-shadow: 0 0 25px rgba(0, 179, 164, 0.3);
+  position: relative;
+  background: #2c2c2c;
+}
+
+/* Selo flutuante no topo do card */
+.selo {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #00B3A4;
+  color: #000;
+  padding: 6px 14px;
+  font-weight: bold;
+  font-size: 0.8rem;
+  border-radius: 20px;
+  box-shadow: 0 2px 6px rgba(0, 179, 164, 0.5);
+  text-transform: uppercase;
+}
+button {
+  background-color: transparent;
+  color: white;
+  border: 2px solid #f9484a;
+  padding: 14px 36px; /* aumentei um pouco o padding para conforto */
+  border-radius: 4px;
+  font-weight: 600;
+  margin-top: auto; /* empurra botão para o fim do card, para alinhar */
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+button:hover {
+    background: #F9484A;
+    color: #fff;
+    box-shadow: 0 1px 25px rgba(249, 72, 74, 0.5); /* sombra mais intensa no hover */
+    transform: translateY(-2px) scale(1.05);
+}
+.diferenciais {
+  list-style: none;
+  padding: 0;
+  margin: 0; /* removi margem negativa */
+  font-size: 0.92rem;
+  text-align: left;
+  line-height: 1.7;
+  color: #ccc;
+}
+
+.diferenciais li::before {
+  content: "✔ ";
+  color: #fff;
+  font-weight: bold;
+}
+.diferenciais.elite li::before {
+  color: #00B3A4;
+}
+@media (max-width: 1222px) {
+  main {
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+  }
+
+ .produto {
+ 
+  padding: 20px 15px;
+  width: 300px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+  #container {
+    height: auto;
+    padding: 40px 0;
+    align-items: flex-start;
+  }
+
+  .selo {
+    top: -14px;
+    font-size: 0.75rem;
+    padding: 5px 12px;
+  }
+
+  .preco {
+    font-size: 2rem;
+  }
+
+  button {
+    padding: 12px 24px;
+  }
+}
+@media(max-width:1024px){
+
+     #menu-header {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    background-color: rgba(0, 0, 0, 0.9);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    padding: 1rem 0;
+    z-index: 999;
+    width: 100%;
+    padding: 1rem 0;      /* Apenas padding vertical */
+    margin: 0;            /* Remove margens */
+    overflow-x: hidden;   /* Garante que não role para os lados */
+    box-sizing: border-box; /* Inclui padding dentro da largura */
+  }
+
+  #menu-header.active {
+    display: flex; /* Torna o menu visível quando ativo */
+  }
+
+  .hamburguer {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1001;
+        margin-left: auto;     /* empurra para a direita */
+    margin-right: 20px;    /* opcional: espaço à direita */
+  }
+    .hamburguer .barra {
+    width: 30px;
+    height: 3px;
+    background: white;
+    transition: 0.3s;
+    
+  }
+  .mobile-only {
+    display: block;
+  }
+  }
