@@ -19,7 +19,7 @@ a {
 }
 
 body {
-    background-image: url('/src/assets/fundo_principal.jpg');
+    background-image: url('../assets/fundo_principal.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -385,16 +385,19 @@ footer {
   position: relative;
     margin-bottom: 0;
   padding-bottom: 20px; /* ou ajuste conforme desejar */
+
+
 }
 
 .estrutura {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
   max-width: 1400px;
   margin: 0 auto;
-  gap: 150px;
+    gap: 170px;
+
 }
 
 
@@ -466,8 +469,8 @@ footer {
 /* Direitos */
 .direitos {
   text-align: center;
-  margin-top: 30px;
-
+  margin-top: -20px;
+  margin-bottom: -20px;
 }
 
 .direitos p {
@@ -511,7 +514,7 @@ footer {
   font-weight: 500;
 }
 
-@media (max-width: 1450px) {
+@media (max-width: 1300px) {
 
   .contador-metricas {
     position: static;          /* Remove a posição fixa */
