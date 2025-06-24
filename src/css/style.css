@@ -761,4 +761,11 @@ footer{
   align-items: center;
   text-align: center;
 }
+.blur-esquerda {
+  backdrop-filter: blur(0px);
+  -webkit-backdrop-filter: blur(0px);
+}
+.imagem-com-texto img{
+    filter: grayscale(0%) brightness(1); /* preto e branco + escurecido */
+}
 }
