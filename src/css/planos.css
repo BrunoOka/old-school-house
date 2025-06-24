@@ -255,6 +255,17 @@ button:hover {
   #menu-header.active {
     display: flex; /* Torna o menu visível quando ativo */
   }
+.hamburguer.active .barra:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburguer.active .barra:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburguer.active .barra:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
 
   .hamburguer {
     display: flex;
@@ -273,7 +284,10 @@ button:hover {
     transition: 0.3s;
     
   }
+  
   .mobile-only {
     display: block;
   }
+  
+  
   }

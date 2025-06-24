@@ -38,20 +38,15 @@ btn.onmousemove = function(e){
 
   digitar();
 
-const hamburguer = document.querySelector('.hamburguer');
-const headerMenu = document.querySelector('#menu-header');
+const hamburguer = document.getElementById('hamburguer');
+const menu = document.getElementById('menu-header');
 
-function toggleMenu(){
-    hamburguer.classList.toggle('active');
-    headerMenu.classList.toggle('active');
-}
-
-hamburguer.addEventListener('click', toggleMenu);
-headerMenu.addEventListener('click', (event) => {
-    if (event.target.classList.contains('item-menu')) {
-        toggleMenu();
-    }
+hamburguer.addEventListener('click', () => {
+  hamburguer.classList.toggle('active');
+  menu.classList.toggle('active');
 });
+
+
 const contadores = document.querySelectorAll('.contador');
 
 contadores.forEach(contador => {
