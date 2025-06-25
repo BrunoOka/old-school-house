@@ -82,7 +82,6 @@ a.button-container {
 button{
     padding: 0.5rem 1rem;
     background-color: transparent;
-    color: white;
     border-radius: 4px;
     border: 1px solid #00B3A4;
     cursor: pointer;
@@ -93,6 +92,7 @@ button span{
     font-size: 1rem;
     position: relative;
     z-index: 9999999;
+    color: white;
 }
 button span:hover{
     color: #F9484A;
