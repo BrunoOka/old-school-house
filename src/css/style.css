@@ -646,6 +646,10 @@ footer {
   margin: 10px auto 0 auto; /* top: 20px, auto horizontal, bottom: 0 */
   text-align: center;
 }
+.botao-saiba {
+  text-align: center;
+  width: 100%;
+}
   .area {
     grid-column: 1;
     padding: 20px;
